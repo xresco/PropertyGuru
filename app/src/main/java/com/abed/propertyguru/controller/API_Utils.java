@@ -43,7 +43,6 @@ public class API_Utils {
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.e("loadStories::", "onError: Couldn't load stories data: " + e.getMessage());
                         if (e instanceof SocketTimeoutException) {
                             loadStories();
                         }
@@ -51,7 +50,6 @@ public class API_Utils {
 
                     @Override
                     public void onNext(List<Long> stories_ids) {
-                        Log.d("loadStories::", "onNext");
                         RxBus.getInstance().postOnTheUiThread(new StoriesLoadedEvent(stories_ids));
                     }
                 });

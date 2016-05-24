@@ -13,6 +13,22 @@ public class Comment {
     private long parent;
     private long[] kids;
 
+
+    public Comment() {
+    }
+
+    public Comment(long id, String by, long time, String text, String type, long parent, long[] kids) {
+        this.id = id;
+        this.by = by;
+        this.time = time;
+        this.text = text;
+        this.type = type;
+        this.parent = parent;
+        this.kids = kids;
+    }
+
+
+
     public String getBy() {
         return by;
     }

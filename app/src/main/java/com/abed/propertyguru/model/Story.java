@@ -10,6 +10,21 @@ public class Story {
     private String url;
     private long[] kids;
 
+
+    public Story() {
+    }
+
+    public Story(long id, String by, long time, String title, String type, String url, long[] kids) {
+        this.id = id;
+        this.by = by;
+        this.time = time;
+        this.title = title;
+        this.type = type;
+        this.url = url;
+        this.kids = kids;
+    }
+
+
     public String getBy() {
         return by;
     }
@@ -34,7 +49,7 @@ public class Story {
         return url;
     }
 
-    public  long[] getKids() {
+    public long[] getKids() {
         return kids;
     }
 
